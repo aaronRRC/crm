@@ -21,6 +21,13 @@
             <% if customer.notes.present? %>
                 <p><strong>Notes: </strong><%= customer.notes %></p>
             <% end %>
+            
+            <% if customer.province_id != nil %>
+                <p><strong>Province:</strong><%= customer.province_id %></p>
+            <% else %>
+                <p><strong>Province:</strong> None</p> 
+            <% end %>
+            
         </div>     
     <% end %>
 </div>
