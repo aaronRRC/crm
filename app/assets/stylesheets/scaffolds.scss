@@ -4,6 +4,7 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  background: #E6E6E6;
 }
 
 p, ol, ul, td {
@@ -66,4 +67,30 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+.lineup{
+  
+  width:900px;
+  
+  .doctors{
+    width: 270px;
+    border:1px solid black;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right:10px;
+    background: white;
+    
+    .right{
+      float: right;
+      margin-right: 5px;
+    }
+    h2{
+      margin-left: 10px;
+    }
+    p{
+      margin-left: 10px;
+    }
+  }
+  
 }

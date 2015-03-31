@@ -1,0 +1,26 @@
+<h1>All Customers</h1>
+<p><%= link_to "New Customer", new_customer_path %> - <%= link_to "Missing Emails", new_customer_path%></p>
+<div class="lineup">
+    <% @customers.each do |customer| %>
+        <div class="doctors">
+            <p class="right"><%= link_to "edit", edit_customer_path(customer) %> - <%= link_to 'x', customer, :onclick => "return confirm('Are you sure you want to delete this doctor?')", method: :delete %></p>
+            <h2><%= customer.name %></h2>
+                
+            <% if customer.image.present? %>
+                <p><%= image_tag customer.image, width:"200", height:"300" %></p>
+            <% end %>
+             
+            <% if customer.phone.present? %>
+                <p><strong>Phone: </strong><%= customer.phone %></p>
+            <% end %>
+                
+            <% if customer.email.present? %>
+                <p><strong>Email: </strong><%= customer.email %></p>
+            <% end %>
+                
+            <% if customer.notes.present? %>
+                <p><strong>Notes: </strong><%= customer.notes %></p>
+            <% end %>
+        </div>     
+    <% end %>
+</div>
