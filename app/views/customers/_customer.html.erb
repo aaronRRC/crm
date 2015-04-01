@@ -23,7 +23,7 @@
             <% end %>
             
             <% if customer.province_id != nil %>
-                <p><strong>Province:</strong><%= customer.province_id %></p>
+                <p><strong>Province:</strong> <%= @province.name %></p>
             <% else %>
                 <p><strong>Province:</strong> None</p> 
             <% end %>
